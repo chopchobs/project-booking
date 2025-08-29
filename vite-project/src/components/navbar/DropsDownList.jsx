@@ -6,21 +6,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { TextAlignCenter } from 'lucide-react';
-import UserIcon from "./UserIcon";
-import { Button } from "../ui/button";
 
-const DropsDownList = () => {
+const DropsDownlist = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger >
-        Open
-{/* 
-        <Button>
-          <TextAlignCenter />
-          <UserIcon />
-        </Button> */}
-
+       Open 
       </DropdownMenuTrigger>
       <DropdownMenuContent>
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -33,4 +24,4 @@ const DropsDownList = () => {
     </DropdownMenu>
   )
 }
-export default DropsDownList;
+export default DropsDownlist;

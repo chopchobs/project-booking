@@ -1,3 +1,4 @@
+import DropsDownlist from "./DropsDownlist";
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
 
@@ -14,7 +15,7 @@ const NavbarAdmin = () => {
         <h1><SearchBar /></h1>
 
         {/* Profile */}
-        <h1>dd</h1> 
+        <DropsDownlist /> 
       </div>
     </nav>
   )

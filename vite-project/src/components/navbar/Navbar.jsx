@@ -1,3 +1,4 @@
+import DropsDownlist from "./DropsDownlist";
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
 
@@ -9,13 +10,13 @@ const Navbar = () => {
        gap-4">
 
         {/* Logo */}
-        <h1><Logo/></h1>
+        <Logo />
 
         {/* Search bar... */}
-        <h1><SearchBar /></h1>
+        <SearchBar />
 
         {/* Profile */}
-        <h1>d</h1>
+        <DropsDownlist />
 
       </div>
     </nav>
