@@ -5,6 +5,7 @@ import Dashboard from "@/pages/admin/Dashboard";
 import Manage from "@/pages/admin/Manage";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/Notfound";
+import Camping from "@/pages/admin/Camping";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router";
 
 const AppRouter = () => {
@@ -22,6 +23,7 @@ const AppRouter = () => {
         <Route path="admin" element={<LayoutAdmin />}>
           <Route index element={<Dashboard />} />
           <Route path="manage" element={<Manage />} />
+          <Route path="camping" element={<Camping />} />
         </Route>
 
         {/* Fallback Route */}

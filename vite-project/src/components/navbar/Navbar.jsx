@@ -1,3 +1,4 @@
+import DropsDownList from "./DropsDownList";
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
 
@@ -15,7 +16,7 @@ const Navbar = () => {
         <h1><SearchBar /></h1>
 
         {/* Profile */}
-        <h1>d</h1>
+        <h1><DropsDownList /></h1>
 
       </div>
     </nav>
