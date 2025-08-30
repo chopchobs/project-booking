@@ -2,7 +2,7 @@ import { User } from 'lucide-react';
 
 const UserIcon = () => {
   return (
-    <div>UserIcon</div>
+    <div><User /></div>
   )
 }
-export default UserIcon
+export default UserIcon;
