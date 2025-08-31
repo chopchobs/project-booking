@@ -6,7 +6,7 @@ import Manage from "@/pages/admin/Manage";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/Notfound";
 import Camping from "@/pages/admin/Camping";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router";
 
 const AppRouter = () => {
   return (

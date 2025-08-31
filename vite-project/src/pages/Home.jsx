@@ -1,4 +1,3 @@
-import { SignedIn, SignedOut, SignInButton, SignOutButton, SignUp, SignUpButton, UserButton } from '@clerk/clerk-react';
 
 const Home = () => {
   return (
@@ -7,4 +6,4 @@ const Home = () => {
     </div>
   )
 }
-export default Home
+export default Home;
