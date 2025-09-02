@@ -3,19 +3,29 @@ import TextAreaInput from "@/components/form/TextAreaInput";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { campingSchema } from "@/utils/schema";
+import Buttons from "@/components/form/Buttons";
+import CategoriesInput from "@/components/form/Categories";
+import MainMap from "@/components/map/MainMap";
 
 //https://react-hook-form.com/get-started
 const Camping = () => {
-    // Register your form inputs , handle form submission
-    const { register, handleSubmit,formState } = useForm({
+        // register is a function that allows you to register your form inputs
+        // handleSubmit is a function that handles form submission
+        // formState contains information about the form's state
+        // setValue is a function that allows you to set the value of a form field
+    const { register, handleSubmit, formState, setValue } = useForm({
+        // resolver is for validating the form data
+        // zodResolver is a function that integrates Zod with React Hook Form
         resolver: zodResolver( campingSchema ),
     });
     // errors = formState.errors, re-structure ออกจาก formState
-    const { errors } = formState;
-    console.log( errors );
+      //isSubmitting is false , true ส่งข้อมูล
+    const { errors,isSubmitting } =  formState;
     // share - ตัวแปรอะไรก็ได้ที่ใช้ในการส่งข้อมูล !!!
-    // data - ข้อมูลที่ถูกส่งมาจากฟอร์ม !!!
-    const share = (data) => {
+     // data - ข้อมูลที่ถูกส่งมาจากฟอร์ม !!!
+    const share = async( data) => {
+        // Simulate a delay for demonstration purposes
+     await new Promise((resolve) => setTimeout(resolve, 4000));
         //code body
         console.log(data);
     };
@@ -49,8 +59,12 @@ const Camping = () => {
                  type='text' 
                  placeholder='In Put Your Description' 
                  errors={errors} />
+
+                 <CategoriesInput name='category' register={register} setValue={setValue} />
                 </div>
-                <button type="submit">Submit</button>
+                {/* MAP */}
+                <MainMap register={register} />
+             <Buttons text="Create Camping" isPending={isSubmitting} />
             </form>
         </div>
     </section>

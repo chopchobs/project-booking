@@ -15,7 +15,6 @@ const NavbarAdmin = () => {
         <h1><SearchBar /></h1>
 
         {/* Profile */}
-
         <h1>
           <DropsDownList />
         </h1>
